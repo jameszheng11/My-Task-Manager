@@ -1,0 +1,70 @@
+body {
+  font-family: Helvetica;
+  margin: 10px;
+}
+
+#taskInput, .task-bar {
+  width: 100%;
+}
+
+#alertMessage {
+  text-align: center;
+}
+
+.spacing {
+  margin: 50px 0;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+}
+
+.custom-shadow {
+  box-shadow: 4px 4px 5px gray;
+}
+
+button, #button{
+  transition: box-shadow 1s;
+}
+
+button:hover, #button:hover{
+  box-shadow: 0 4px 5px gray;
+}
+
+.task-buttons, .first-row, .second-row, .third-row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.firstName, .taskName {
+  flex: 50%;
+}
+
+.task-buttons button {
+  width: 110px;
+}
+
+.firstName, .taskName, .taskInput, .assignedToName, .emailInput, .start {
+  padding: 0 10px;
+}
+
+.taskInput, .assignedToName, .emailInput {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .task-buttons, .third-row, .first-row {
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .task-buttons .btn {
+    width: 300px;
+  }
+}

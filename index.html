@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Task Planner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  
+  <body>
+    <div class="container border rounded-lg shadow pt-5">
+      <h1 class="text-center">Task Planner</h1>
+
+      <form id="newTask">
+        <!-- First Row -->
+        <div class="first-row my-3 spacing">
+          
+          <!-- First Name Input -->
+          <div class="my-3 firstName">
+            <label for="firstName" class="form-label">First Name: </label>
+            <input type="text" class="form-control shadow" id="firstName">
+          </div>
+          
+          <!-- Task Name Input -->
+          <div class="my-3 taskName">
+            <label for="taskName" class="form-label">Task Name: </label>
+            <input type="text" class="form-control shadow" id="taskName">
+          </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="my-3 spacing second-row">
+          
+          <!-- Task Description Input -->
+          <div class="my-3 taskInput">
+            <label for="taskInput" class="form-label">Task Description: </label>
+            <div class="form-inline">
+              <div class="form-group task-bar">
+                <input type="text" class="form-control shadow" id="taskInput">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Third Row -->
+        <div class="my-3 spacing third-row">
+          
+          <!-- Date Input -->
+          <div class="my-3 start">
+            <label for="start" class="form-label">Due date:</label><br>
+            <input type="date" class="border-0 p-2" id="start" name="trip-start" value="yyyy-mm-dd" min="1900-01-01" max="2099-12-31">
+          </div>
+          
+          <!-- Assignment Input -->
+          <div class="my-3 assignedToName">
+            <label for="assignedToName" class="form-label">Assigned To: </label>
+            <input type="text" class="form-control shadow" id="assignedToName">
+          </div>
+          
+          <!-- Email Input -->
+          <div class="my-3 emailInput">
+            <label for="emailInput" class="form-label">Email: </label>
+            <input type="email" class="form-control shadow" id="emailInput">
+          </div>
+          
+        </div>
+
+        <!-- Error Message -->
+        <div id="alertMessage" style="display: none" class="alert alert-danger" role="alert">
+          Error message
+        </div>
+        
+        <!-- Fourth Row -->
+        <div class="row my-3 spacing text-center">
+          
+          <!-- Submit Button -->
+          <div class="col">
+            <input class="btn btn-outline-dark" id="button" type="submit" value="Submit">
+          </div>
+          
+        </div>
+      </form>
+      
+      <!-- TODO List -->
+      <h3 class="mt-5 mb-3 text-center">To Do List</h3>
+      
+      <div class="container-fluid mx-auto row">
+        <div class="col">
+          <div class="card shadow">
+            <ul class="list-group list-group-flush" id="tasksList">
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Task Buttons -->
+      <div class="my-5">
+        <div class="task-buttons" id="taskButtons">
+
+          <!-- Task Change Buttons Start -->
+          <!-- Task Complete Button -->
+          <div class="complete mx-auto my-2">
+            <button type="button" class="btn btn-outline-success taskChangeButton" id="complete">Task<br>Complete</button>
+          </div>
+          
+          <!-- Task In-Progress Button -->
+          <div class="in-progress mx-auto my-2">
+            <button type="button" class="btn btn-outline-warning taskChangeButton" id="in-progress">Task<br>In-progress</button>
+          </div>
+
+          <!-- Task Reset Button -->
+          <div class="reset mx-auto my-2">
+            <button type="button" class="btn btn-outline-danger taskChangeButton" id="reset">Task<br>Reset</button>
+          </div>
+          <!-- Task Change Buttons End -->
+
+          <!-- Task Delete Button -->
+          <div class="delete mx-auto my-2">
+            <button type="button" class="btn btn-outline-dark taskDeleteButton" >Task<br>Delete</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap and local JavaScript links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.2.2/mocha.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="js/taskManager.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+  
+</html>
